@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Man_Match</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+
+</head>
+<body>   
+    <div class = "container-fluid">
+        <div class = "row">
+            <div class = "col-md-6 col-xl-6">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Players</th>
+                            <th scope="col">Runs</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb"></tbody>
+                </table>
+            </div>
+        
+            <div class = "col-md-6 col-xl-6">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Players</th>
+                            <th scope="col">Runs</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb2"></tbody>
+                <table>
+            </div>
+        </div>   
+    </div>
+
+    <script> 
+
+       
+
+        T1=localStorage.getItem('Team1')
+        T2=localStorage.getItem('Team2')
+
+        T1 = T1.split(",")
+        T2 = T2.split(",")
+
+        var Team1 = T1.map(function (x){
+            return parseInt(x)
+        })
+
+
+        var Team2 = T2.map(function (x){
+            return parseInt(x);
+        })
+
+
+        var HigheSt_score = [...Team1].sort((a, b) => b - a)
+        x1 = Team1.indexOf(HigheSt_score[0])
+        console.log(`The Player with Highest Score : ${x1 + 1 } in Team 1`)
+
+        var HigheSt_score2 = [...Team2].sort((a, b) => b - a)
+        x2 = Team2.indexOf(HigheSt_score2[0])
+        console.log(`The Player with Highest Score : ${x2 + 1 } in Team 2`)
+        
+        Table = document.getElementById("tb");
+        Table2 = document.getElementById("tb2");
+        count = 1;
+        count2 = 1;
+        Team1.forEach(element => {
+            var Table_row = document.createElement("tr");
+            var Table_datano = document.createElement("td");
+            var Table_dataplayer = document.createElement("td");
+            var Table_datarun = document.createElement("td");
+                Table_datano.innerText= count;
+                Table_dataplayer.innerText= 'Player ' + count;
+                Table_datarun.innerText=element;
+                count ++ ;
+                Table_row.appendChild(Table_datano);
+                Table_row.appendChild(Table_dataplayer);
+                Table_row.appendChild(Table_datarun);
+                Table.appendChild(Table_row);
+
+        });
+
+        Team2.forEach(element => {
+            var Table_row = document.createElement("tr");
+            var Table_datano = document.createElement("td");
+            var Table_dataplayer = document.createElement("td");
+            var Table_datarun = document.createElement("td");
+                Table_datano.innerText= count2;
+                Table_dataplayer.innerText= 'Player ' + count2;
+                Table_datarun.innerText=element;
+                count2 ++ ;
+                Table_row.appendChild(Table_datano);
+                Table_row.appendChild(Table_dataplayer);
+                Table_row.appendChild(Table_datarun);
+                Table2.appendChild(Table_row);
+
+        });
+
+        
+
+
+
+        
+
+        
+
+        // let xhr = new XMLHttpRequest();
+
+        // xhr.onreadystatechange = function() {
+        // if (this.readyState === 4 && this.status === 200) {
+        // //console.log(this.responseText);
+        // details = this.responseText
+
+        // document.body.innerHTML = details;
+         
+        //     }
+        // }
+
+        // xhr.open("GET", "http://localhost:6060/Man_Match", true);
+
+        // xhr.send();
+
+    </script>
+</body>
+</html>

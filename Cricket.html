@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .split {
+            height: 100%;
+            width: 25%;
+            position: fixed;
+            top: 0;
+        }
+
+        .left {
+
+            left: 0;
+            background-color: yellowgreen;
+        }
+
+
+        .btn1>input {
+            margin-left: 400px;
+            margin-top: 410px;
+            width: 205px;
+            height: 50px;
+        }
+
+        .right {
+
+            right: 0;
+            background-color: red;
+        }
+
+         #team1{
+            margin-left: 400px;
+            margin-top: 410px;
+            width: 205px;
+            height: 50px;
+        }
+
+        #team2{
+            margin-left: 280px;
+            margin-top: 410px;
+            width: 205px;
+            height: 50px;
+        }
+
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+
+    <script type="text/javascript" src="Cricket.js">
+
+    
+    </script>
+</head>
+
+<body>
+
+    <div class="split left">
+
+
+        <div class="centered">
+            <h1> Team 1</h1>
+
+            <input type="Text" name="scorecard" style="font-size:50px ; width:200px" id="score1" disabled></input>
+            <br><br>
+
+            <label for="Player 1">Player 1</label>
+            <br>
+            <input type="Text" name="Player 1" id='T01' value="" style="width:200px" disabled >
+            <br><br>
+
+            <label for="Player 2">Player 2</label>
+            <br>
+            <input type="Text" name="Player 2" id='T02' value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 3">Player 3</label>
+            <br>
+            <input type="Text" name="Player 3"  id='T03'value=""  style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 4">Player 4</label>
+            <br>
+            <input type="Text" name="Player 4" id='T04' value=""style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 5">Player 5</label>
+            <br>
+            <input type="Text" name="Player 5" id='T05' value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 6">Player 6</label>
+            <br>
+            <input type="Text" name="Player 6" id='T06'value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 7">Player 7</label>
+            <br>
+            <input type="Text" name="Player 7" id='T07'value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 8">Player 8</label>
+            <br>
+            <input type="Text" name="Player 8" id='T08'value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 9">Player 9</label>
+            <br>
+            <input type="Text" name="Player 9" id='T09'value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 10">Player 10</label>
+            <br>
+            <input type="Text" name="Player 10" id='T010' value="" style="width:200px" disabled>
+            <br><br>
+
+            <br>
+            <br>
+
+        </div>
+
+    </div>
+
+
+        <input type="Button" id="team1" value="Team 1 Play" style="font-size:20px" onclick="shuffle1()"onclientclick="if (!shuffle1()) {return false;};"></input>
+    
+
+
+    <div class="split right">
+
+
+        <div class="centered">
+
+            <h1> Team 2 </h1>
+            <input type="Text" name="scorecard" style="font-size: 50px; width:200px;" id="score2" disabled></input>
+
+            <br>
+            <br>
+
+
+            <label for="Player 1">Player 1</label>
+            <br>
+            <input type="Text" name="Player 1" id='T11' value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 2">Player 2</label>
+            <br>
+            <input type="Text" name="Player 2" id='T12' value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 3">Player 3</label>
+            <br>
+            <input type="Text" name="Player 3" id='T13' value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 4">Player 4</label>
+            <br>
+            <input type="Text" name="Player 4" id='T14' value=""style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 5">Player 5</label>
+            <br>
+            <input type="Text" name="Player 5" id='T15' value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 6">Player 6</label>
+            <br>
+            <input type="Text" name="Player 6" id='T16' value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 7">Player 7</label>
+            <br>
+            <input type="Text" name="Player 7" id='T17' value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 8">Player 8</label>
+            <br>
+            <input type="Text" name="Player 8" id='T18' value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 9">Player 9</label>
+            <br>
+            <input type="Text" name="Player 9" id='T19' value="" style="width:200px" disabled>
+            <br><br>
+
+            <label for="Player 10">Player 10</label>
+            <br>
+            <input type="Text" name="Player 10" id='T110' value="" style="width:200px" disabled>
+            <br><br>
+
+            <br>
+            <br>
+
+        </div>
+
+    </div>
+
+
+        <input type="Button" id="team2" value="Team 2 Play" style="font-size:20px" onclick="shuffle2()" onclientclick="if (!shuffle2()) {return false;};"></input>
+    
+
+   
+    <div>
+
+        <button type="Result" id="resus" value="Result"
+            style="width:200px;  height:50px; margin-top: 100px; margin-left:680px;" onclick="result()"> Result</button>
+
+    </div>
+
+</body>
+
+</html>
